@@ -1,0 +1,39 @@
+﻿@model TodoWithEF.Models.TodoItem
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="jumbotron text-center">
+    <div class="col-6 offset-3">
+        <h2>DELETE - TODO list item</h2>
+    </div>
+</div>
+
+<div class="container col-lg-8 col-lg-offset-4">
+    <h3>Are you sure you want to delete = <span class="text-danger">@Html.DisplayFor(model => model.Item)</span></h3>
+    <hr>
+<div>
+
+    <!--    <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Item)
+            </dt>
+
+            <dd>
+               @Html.DisplayFor(model => model.Item)
+            </dd>
+
+        </dl>
+    -->
+
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color text">
+                <input type="submit" value="Delete" class="btn btn-default" />
+               <button class="btn btn-default" >@Html.ActionLink("Back to List", "Index")</button>
+            </div>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TodoWithEF.Models.TodoItem>
+
+@{
+    ViewBag.Title = "";
+}
+<div class="jumbotron text-center">
+    <div class="col-6 offset-3">
+        <h1>TODO List</h1>
+        <hr>
+        <!--<input type="text" placeholder="Note here..." class="form-control center-block">-->       
+        <button class="btn btn-warning btn-lg">@Html.ActionLink("Create New", "Create")</button>
+
+        <button class="btn btn-danger">@Html.ActionLink("Clear all", "DeleteAll")</button>
+    </div>
+</div>
+<div class="container col-lg-6 col-lg-offset-3">
+    <!--table-->
+    <table class="table">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item)
+                </td>
+                <td>
+                    <button class="btn btn-info">@Html.ActionLink("Edit", "Edit", new { id = item.id })</button>
+                    <button class="btn btn-success">@Html.ActionLink("Delete", "Delete", new { id = item.id })</button>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+
+
+
+
+
