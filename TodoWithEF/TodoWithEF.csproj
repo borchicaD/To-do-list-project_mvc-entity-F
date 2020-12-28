@@ -210,6 +210,7 @@
     <Content Include="Views\TodoItems\Delete.cshtml" />
     <Content Include="Views\TodoItems\Edit.cshtml" />
     <Content Include="Views\TodoItems\Index.cshtml" />
+    <Content Include="Views\TodoItems\DeleteAll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

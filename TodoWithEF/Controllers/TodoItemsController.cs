@@ -100,6 +100,15 @@ namespace TodoWithEF.Controllers
             return RedirectToAction("Index");
         }
 
+        // DeleteAll
+        [HttpPost, ActionName("DeleteAll")]
+        [ValidateAntiForgeryToken]
+
+        public ActionResult DeleteAll()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
