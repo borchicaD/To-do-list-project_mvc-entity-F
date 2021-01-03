@@ -1,18 +1,21 @@
-﻿@model TodoWithEF.Models.TodoItem
-
+﻿
 @{
-    Layout = null;
+    ViewBag.Title = "DeleteAll";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>All done...</title>
-</head>
-<body>
-    <div> 
+<div class="jumbotron text-center">
+    <div class="col-6 offset-3">
+        <h2>TODO list</h2>
     </div>
-</body>
-</html>
+</div>
+<div class="container col-lg-8 col-lg-offset-2">
+
+    <h2>You all DONE! Good job!</h2>
+    <hr>
+    <br>
+
+
+<div class="col-lg-offset-2">
+    <button class="btn btn-info">@Html.ActionLink("Back to List", "Index")</button>
+</div>
+</div>
+

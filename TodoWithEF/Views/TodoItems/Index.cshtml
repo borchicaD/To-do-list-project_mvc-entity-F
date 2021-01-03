@@ -1,13 +1,10 @@
 ﻿@model IEnumerable<TodoWithEF.Models.TodoItem>
 
-@{
-    ViewBag.Title = "";
-}
+
 <div class="jumbotron text-center">
     <div class="col-6 offset-3">
         <h1>TODO List</h1>
-        <hr>
-        <!--<input type="text" placeholder="Note here..." class="form-control center-block">-->       
+        <hr>      
         <button class="btn btn-warning btn-lg">@Html.ActionLink("Create New", "Create")</button>
 
         <button class="btn btn-danger">@Html.ActionLink("Clear all", "DeleteAll")</button>

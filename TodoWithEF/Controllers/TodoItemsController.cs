@@ -100,14 +100,19 @@ namespace TodoWithEF.Controllers
             return RedirectToAction("Index");
         }
 
-        // DeleteAll
-        [HttpPost, ActionName("DeleteAll")]
-        [ValidateAntiForgeryToken]
+        //TodoItems/ DeleteAll
 
-        public ActionResult DeleteAll()
+        public ActionResult DeleteAll(IEnumerable<int>TodoIdsToDelete)
         {
-            return View();
+            using (TODOEntities db = new TODOEntities())
+            {
+                List<TodoItem> TodoList = db.TodoItems.ToList();
+                db.TodoItems.RemoveRange(TodoList);
+                db.SaveChanges();
+                return View();
+            }
         }
+
 
         protected override void Dispose(bool disposing)
         {
