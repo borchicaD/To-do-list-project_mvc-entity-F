@@ -102,7 +102,7 @@ namespace TodoWithEF.Controllers
 
         //TodoItems/ DeleteAll
 
-        public ActionResult DeleteAll(IEnumerable<int>TodoIdsToDelete)
+        public ActionResult DeleteAll()
         {
             using (TODOEntities db = new TODOEntities())
             {

@@ -15,7 +15,6 @@ namespace TodoWithEF.Models
     public partial class TodoItem
     {
         public int id { get; set; }
-        public int Id { get; internal set; }
         public string Item { get; set; }
     }
 }
